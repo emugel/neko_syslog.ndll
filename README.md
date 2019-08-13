@@ -1,9 +1,7 @@
-# 
-
 There is also [linc_syslog](https://github.com/emugel/linc_syslog), but it can not be called from **Neko**.
 So here is a simpler wrapper for syslog functions to ndll, can be called from Neko.
 
-It's quite simplistic:
+It's quite simplistic, here's a test/example:
 
 ```haxe
 import neko.Lib;
@@ -44,3 +42,10 @@ The codes are standard, so respecting those codes I'd use something like:
     var Debug  = 7;
 }
 ```
+
+# Usage
+
+* Run `gcc neko_syslog.cpp --shared -fPIC -o neko_syslog.ndll`
+* Copy the file *neko_syslog.ndll* to whereever are your ndll files (`locate .ndll`).
+* Then compile the example.
+* It should show in your syslog (if using systemd, try e.g. with `journalctl -e` if you see the entry).
