@@ -1,0 +1,7 @@
+There is linc_syslog, it can not be called from neko.
+Here is a simpler wrapper for syslog functions to ndll,
+so it can be called from neko.
+
+It's going to be very simplistic.
+
+
